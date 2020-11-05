@@ -70,7 +70,7 @@ $ git init
 $ git add .
 $ git commit -m "Subir ficheros iniciales del proyecto"
 $ git branch -M main
-$ git remote add origin https://github.com/crojasf/03-huddle-landing-page.git
+$ git remote add origin https://github.com/crojasf/04-base-apparel.git
 $ git push -u origin main
 ```
 
