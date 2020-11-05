@@ -20,6 +20,8 @@ Para preparar el entorno se debe instalar Node.js en el equipo e instalar *gulp*
 + Crear la estructura HTML del componente a crear.
 + Crear estilos para Mobile First y retocar algunas etiquetas HTML.
 + Aplicar MediaQuerys para estilos para Desktop y algunos ajustes finales.
++ Agregar funcionalidades JavaScript
+
 
 ## Demo
 El resultado del proyecto puede verse [aquí](https://crojasf.github.io/04-base-apparel/).
