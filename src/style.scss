@@ -24,9 +24,21 @@ BASE
 
 
 body {
- background-color: $color-primary-soft;
+	background-color: $color-primary-soft;
 }
 
+main {
+	max-width: 375px;
+	margin: 0 auto;
+	position: flex;
+}
+
+
+.hero {
+	background-image: url('../images/hero-mobile.jpg');
+	width: 375px;
+	height: 250px;
+}
 
 footer {
 	margin-top: 100px;
