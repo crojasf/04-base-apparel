@@ -23,6 +23,14 @@ $font-family-body: 'Josefin Sans', sans-serif;
 $font-size: 16px;
 
 
+// breakpoints
+// -------------------------
+
+$bp-sm: 375px; // mobile
+$bp-lg: 1440px; // desktop
+
+
+
 /* 
 ======================
 STYLES
@@ -37,11 +45,15 @@ STYLES
 
 body {
 	margin: 0;
-	background-color: $color-primary-soft;
 	font-family: $font-family-body;
 	font-size: $font-size;
 	background-image: linear-gradient(135deg, $gradient-light-init, $gradient-light-end);
-	// background: url('../images/bg-pattern-desktop.svg');
+	
+	@media (min-width: $bp-lg) {
+		background:  url('../images/bg-pattern-desktop.svg') no-repeat ;
+		background-size: cover;				
+	}
+
 }
 
 
@@ -50,9 +62,16 @@ body {
 // -------------------------
 
 main {
-	max-width: 375px;
+	width: $bp-sm;
 	margin: 0 auto;
-	position: flex;
+
+	@media (min-width: $bp-lg) {
+		width: $bp-lg;
+		display: grid;
+		grid-template-columns: 830px 610px;
+		grid-template-rows: 180px auto;
+	}
+
 }
 
 
@@ -60,11 +79,32 @@ main {
 // -------------------------
 
 .logo {
-	padding: 2em;
+	padding: 0 2em;
+	height: 84px;
+	display: flex;
+	align-items: center;
+	justify-self: center;
+	
+		@media (min-width: $bp-lg) {
+			grid-column: 1 / span 1;
+			grid-row: 1 / span 1;
+			padding: 0 3.5em 0 0;
+			height: 180px;
+			width: 450px;
+
+		}
 
 	&__image {
 		width: 100px;
+		
+		
+		@media (min-width: $bp-lg) {
+			width: 180px;
+			
+		}
+
 	}
+
 }
 
 
@@ -73,8 +113,17 @@ main {
 
 .hero {
 	background-image: url('../images/hero-mobile.jpg');
-	width: 375px;
+	width: $bp-sm;
 	height: 250px;
+	
+	@media (min-width: $bp-lg) {
+		background-image: url('../images/hero-desktop.jpg');
+		width: 610px;
+		height: 800px;
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 2;
+	}
+
 }
 
 
@@ -87,6 +136,21 @@ main {
 .comming {
 	padding: 4em 2em;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-self: center;
+	flex-direction: column;
+	
+	
+	@media (min-width: $bp-lg) {
+		grid-column: 1 / span 1;
+		grid-row: 2 / span 1;
+		
+		padding: 4em 3.5em 4em 0;
+		width: 450px;
+
+		text-align: left;
+	}
 
 	&__title {
 		margin: 0 0;
@@ -95,6 +159,12 @@ main {
 		font-size: 2.5em;
 		font-weight: 600;
 		color: $color-primary-dark-grayish;
+
+
+		@media (min-width: $bp-lg) {
+			font-size: 4em;
+		}
+
 		
 		&--highlight {
 			font-weight: 300;
@@ -106,9 +176,14 @@ main {
 		font-size: 0.9em;
 		font-weight: normal;
 		line-height: 1.75em;		
+		
+		@media (min-width: $bp-lg) {
+			font-size: 1em;
+		}
 	}
 	&__form {
 		margin: 1em 0;
+		width: 100%;
 	}
 	&__email {
 		position: relative;
@@ -129,21 +204,36 @@ main {
 		&:focus{
 			outline: none;
 		}
+
+		@media (min-width: $bp-lg) {
+			font-size: 1em;
+			padding-left: 1.5em;
+		}
+
+
 	}
 	&__error-email-icon{
 		position: absolute;
 		right: 80px;
 		height: 1.2em;
 		top: calc(50% - 0.6em);
+		@media (min-width: $bp-lg) {
+			right: 100px;
+		}
 		
 	}
+
 	&__error-email-message{
 		display: block;
 		text-align: left;
 		padding: .75em 1.5em;
 		font-size: 0.75em;
 		color: $color-primary-soft;
+		@media (min-width: $bp-lg) {
+			padding: .75em 1.8em;
+		}
 	}
+
 	&__button {
 		position: absolute;
 		right: 0;
@@ -164,6 +254,10 @@ main {
 		&:focus{
 			outline: none;
 		}	
+		
+		@media (min-width: $bp-lg) {
+			padding: 0 3em;
+		}
 	}
 
 }
