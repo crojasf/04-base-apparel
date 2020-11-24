@@ -34,7 +34,7 @@ Para iniciar el proyecto se realizaron los siguientes pasos:
 
 + Ejecutar `$ npm install --save-dev gulp` para instalar gulp en el proyecto.
 + Ejecutar `$ npm init` para inicar el proyecto y se cree el fichero *package.json*.
-+ Crear el fichero *gulfile.js* para llamar a las dependencias que instalemos, primero agregando el código `$ var gulp = require('gulp');`.
++ Crear el fichero *gulpfile.js* para llamar a las dependencias que instalemos, primero agregando el código `$ var gulp = require('gulp');`.
 + Instalar las dependencias que vamos a utilizar ` $ npm install --save-dev gulp-cli postcss gulp-postcss autoprefixer gulp-sass`.
 + Agregar dependencias y tareas en *gulpfile.js*.
 

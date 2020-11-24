@@ -31,10 +31,10 @@
     <article class="comming">
       <h1 class="comming__title"><span class="comming__title--highlight">We're</span> coming soon</h1>
       <p class="comming__parraf">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <form action="" id="formContact" class="comming__form">
+        <form action="" id="formContact" class="comming__form" onsubmit="event.preventDefault();">
           <div class="comming__email">
-            <input type="email" name="" id="email" placeholder="Email Address" class="comming__input" />
-            <button type="button" id="comming__button" class="comming__button"><img src="images/icon-arrow.svg" alt="" /></button>
+            <input type="email" name="email" id="email" placeholder="Email Address" class="comming__input" />
+            <button type="submit" name="enviar" id="comming__button" class="comming__button"><img src="images/icon-arrow.svg" alt="" /></button>
             <img src="images/icon-error.svg" alt="" class="comming__error-email-icon hidden" id="comming__error-email-icon" />
           </div>
           <span class="comming__error-email-message hidden" id="comming__error-email-message">Please provide a valid email</span>
